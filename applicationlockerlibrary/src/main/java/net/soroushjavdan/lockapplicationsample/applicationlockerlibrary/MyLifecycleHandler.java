@@ -104,6 +104,8 @@ public class MyLifecycleHandler implements Application.ActivityLifecycleCallback
     private static int stopped;
 
     public static boolean isApplicationVisible() {
+        if (started == 0)
+            started = 1;
         return started > stopped;
     }
 
